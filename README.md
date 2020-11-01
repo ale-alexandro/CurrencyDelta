@@ -53,13 +53,13 @@ $ python3 -m pip install -r requirements.txt
 $ flask db init 
 $ flask db migrate
 $ flask db upgrate 
+$ export FLASK_ENV=development
 $ flask run
 ```
-Install the dependencies and start the dev server of service(frontend).
+To run production
 ```bash
-$ cd static
-$ npm install
-$ npm run dev
+$ python3 -m pip install gunicorn
+$ gunicorn --bind 0.0.0.0:80 CurrencyDelta:app
 ```
 
 
